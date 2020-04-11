@@ -1,0 +1,60 @@
+.cursos {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 40px;
+}
+
+.cursos__h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cursos__card {
+  border-radius: 15px;
+  box-shadow: 3px 3px 7px #a6acaf;
+  margin-top: 40px;
+}
+
+.card-img-top{
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+    .cursos__card:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-15px);
+    box-shadow: 3px 9px 5px #a6acaf;
+    }
+
+.cursos__card_h4 {
+  color: var(--my-color-secundary);
+}
+
+.cursos__p{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-footer {
+  background: #ECF0F1;
+  border-radius: 15px;
+}
+
+.btn_cursos {
+  border: solid 1px var(--my-color-six);
+  color: var(--my-color-six);
+}
+
+    .btn_cursos:hover {
+    background: var(--my-color-six);
+    color: white;
+    }
+
+.badges{
+  margin-bottom: 20px;
+}
+
+.badges span:nth-last-child(-n+1){
+  margin-left: 10px;
+}

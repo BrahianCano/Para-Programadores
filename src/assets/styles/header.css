@@ -1,0 +1,16 @@
+.header {
+  background: var(--my-color-cero);
+}
+
+.header_animation {
+  background: #ffffff;
+  box-shadow: 1px 4px 6px #a6acaf;
+}
+
+.transition {
+  transition: all 0.5s ease;
+}
+
+.header__logotipo {
+  width: 70px;
+}

@@ -1,0 +1,29 @@
+.slider {
+  padding: 50px 10px 50px 10px;
+  margin-top: 70px;
+  background: -webkit-linear-gradient(
+    var(--my-color-cero),
+    var(--my-color-primary)
+  );
+}
+
+.slider__img {
+  width: 470px;
+}
+
+.col-rigth {
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.slider__h1 {
+  color: var(--my-color-secundary);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.slider__p {
+  color: var(--my-color-quarter);
+  margin-bottom: 15px;
+}
