@@ -1,6 +1,7 @@
 //Importar Jquery
 import $ from 'jquery'
 
+
 $(window).scroll(function () {
     if ($("#menu").offset().top > 430) {
         $("#header").addClass("header_animation");
@@ -14,3 +15,7 @@ $(window).scroll(function () {
         $("#header").removeClass("header_animation");
     }
 });
+
+
+
+

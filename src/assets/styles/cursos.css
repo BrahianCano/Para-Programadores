@@ -1,56 +1,46 @@
+/*Clase que contine los card*/
 .cursos {
   margin-top: 10px;
   margin-bottom: 40px;
   padding: 40px;
 }
 
+
+/*Titulo principal de la seccion*/
 .cursos__h2 {
   font-weight: 600;
   margin-bottom: 20px;
 }
 
+.badge.badge-warning{
+  margin-left: 10px;
+}
+/*Card de los cursos*/
 .cursos__card {
   border-radius: 15px;
   box-shadow: 3px 3px 7px #a6acaf;
   margin-top: 40px;
 }
 
-.card-img-top{
-    height: 200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-    .cursos__card:hover {
+  .cursos__card:hover {
     transition: all 0.5s ease;
     transform: translateY(-15px);
     box-shadow: 3px 9px 5px #a6acaf;
-    }
+  }
 
+/*Imagen Card de los cursos*/
+.card-img-top{
+  height: 190px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*Titulo Card de los cursos*/
 .cursos__card_h4 {
   color: var(--my-color-secundary);
 }
 
-.cursos__p{
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.card-footer {
-  background: #ECF0F1;
-  border-radius: 15px;
-}
-
-.btn_cursos {
-  border: solid 1px var(--my-color-six);
-  color: var(--my-color-six);
-}
-
-    .btn_cursos:hover {
-    background: var(--my-color-six);
-    color: white;
-    }
-
+/*Badget Card de los cursos*/
 .badges{
   margin-bottom: 20px;
 }
@@ -58,3 +48,31 @@
 .badges span:nth-last-child(-n+1){
   margin-left: 10px;
 }
+
+/*Descripcion Card de los cursos*/
+.cursos__p{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*Boton Card de los cursos*/
+.btn_cursos {
+  border: solid 1px var(--my-color-six);
+  color: var(--my-color-six);
+}
+
+  .btn_cursos:hover {
+    background: var(--my-color-six);
+    color: white;
+  }
+
+
+/*Footer Card de los cursos*/
+.card-footer {
+  background: #ECF0F1;
+  border-radius: 15px;
+}
+
+
+
+
