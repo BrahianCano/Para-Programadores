@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Firebase Config
 import './assets/scripts/firebaseConfig.js'
@@ -13,21 +14,28 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
 import './assets/styles/global.css';
 
-// Importar componentes //
-import HeaderComponent from './components/HeaderComponent.jsx';
-import HeaderSlider from './components/SliderComponent.jsx';
-import CursosComponent from './components/CursosComponent.jsx'
-import FooterComponent from './components/FooterComponent.jsx'
+//Importar Layout de componentes
+import Layout from './components/Layout.js'
 
+// Importar componentes //
+import HeaderSlider from './components/SliderComponent.jsx';
+import CursosComponent from './components/CursosComponent.jsx';
+import AboutUsComponent from './components/AboutusComponent.jsx';
+
+// Importar paginas //
+import InicioPage from './containers/InicioPage.jsx';
 
 const App = () => {
     return (
-        <React.Fragment>
-           <HeaderComponent/>
-           <HeaderSlider/>
-           <CursosComponent/>
-           <FooterComponent/>
-        </React.Fragment>
+
+        <BrowserRouter>
+            <Layout>
+                <Switch>
+                     <Route exact path = "/" component={InicioPage} />
+                     <Route exact path = "/sobre-nosotros" component={AboutUsComponent} />
+                </Switch>
+            </Layout>
+        </BrowserRouter>
     );
 }
 

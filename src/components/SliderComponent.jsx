@@ -50,9 +50,11 @@ export default class SliderComponent extends Component {
                 })
                     .then(function (docRef) {
                         alertify.success(`¡Listo! Gracias por ser parte de Para Programadores.`);
+                        document.getElementById('exampleInputEmail').disabled = true;
+                        document.getElementById('exampleInputName').disabled = true;
                     })
                     .catch(function (error) {
-                        alertify.warning(`¡Ups! Error de servidor, revisa tu conexion e intenta de nuevo.`);
+                        alertify.warning(`¡Ups! Hubo un error del servidor, revisa tu conexion e intenta de nuevo.`);
                     });
             });
         } else {
@@ -70,12 +72,14 @@ export default class SliderComponent extends Component {
             querySnapshot.docs.map(usuario => {
                 if (usuario.id === address_ip_validated) {
 
-                    console.log('Direccion ip local: ' + address_ip_validated + ' Direccion ip Firebase ' + usuario.id)
+                   // console.log('Direccion ip local: ' + address_ip_validated + ' Direccion ip Firebase ' + usuario.id)
 
                     this.setState({
                         usuario: usuario.data().usuario,
                         correo: usuario.data().correo
                     });
+                    document.getElementById('exampleInputEmail').disabled = true;
+                    document.getElementById('exampleInputName').disabled = true;
                 } else {
                     console.log('Aun no has registrado tus datos')
                 }
@@ -105,10 +109,9 @@ export default class SliderComponent extends Component {
                                                 name="usuario"
                                                 value={this.state.usuario}
                                                 onChange={this.handleChange} />
-
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor ="exampleInputEmail" className="text-secondary" >Ingrese su dirección de correo</label>
+                                            <label htmlFor="exampleInputEmail" className="text-secondary" >Ingrese su dirección de correo</label>
                                             <input type="email"
                                                 placeholder="alguien@ejemplo.com"
                                                 className="form-control"
@@ -131,6 +134,7 @@ export default class SliderComponent extends Component {
                         </div>
                     </div>
                 </section>
+                
             </Fragment>
 
         );

@@ -24,18 +24,18 @@ export default class CursosComponent extends Component {
         });
     }
 
-
     render() {
         const { cursos } = this.state;
-        console.log(cursos) //Pendiente borrar en produccion
+        //console.log(cursos) //Pendiente borrar en produccion
         return (
             <Fragment>
+                
                 <section className="cursos container-fluid">
                     <h2 className="text-center cursos__h2" >Cursos disponibles
                         <span className="badge badge-warning"> {cursos.length}</span>
                     </h2>
 
-                    <p className="cursos__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim cum atque beatae ipsum molestias cupiditate est, libero nemo facilis debitis ipsam consectetur sint eum illum maxime cumque blanditiis reiciendis accusantium?</p>
+                    <p className="cursos__p">En cuarentena es momento de aprender cosas nuevas, cursos para jóvenes y adultos, avanzados o principiantes. Tu eliges</p>
 
                     <div className="row row-cols-xs-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 d-flex justify-content-center">
                         {
@@ -58,7 +58,7 @@ export default class CursosComponent extends Component {
 
                                                 <p className="card-text">{curso.data.descripcion}</p>
 
-                                                <button type="button" className="btn btn_cursos" data-toggle="modal" data-target="#exampleModal">Ver mas</button>
+                                                <a type="button" href={curso.data.enlace} className="btn btn_cursos">Ver mas</a>
                                             </div>
 
                                             <div className="card-footer">
@@ -71,6 +71,7 @@ export default class CursosComponent extends Component {
                         }
                     </div>
                 </section>
+
             </Fragment>
         )
     }

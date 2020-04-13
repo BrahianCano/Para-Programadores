@@ -1,9 +1,17 @@
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom';
+
+
+//Importar alertas de alertifyjs
+import alertify from 'alertifyjs';
 
 import '../assets/styles/footer.css'
 
 export default class FooterComponent extends Component {
     render() {
+        function alert(){
+            alertify.warning('La seccion de "Cursos" se encuentra en desarrollo');
+        }
         return (
             <Fragment>
 
@@ -13,9 +21,8 @@ export default class FooterComponent extends Component {
                         <div className="row">
                             <div className="col-md-7 mx-auto">
                                 <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Acerca de nosotros</h5>
-                                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipisicing elit.
+                                <p>paraprogramadores es una comunidad de aprendizaje en línea que está dirigida a jóvenes y adultos.
+                                  <br/>  Utilizamos contenido previamente creado a la disposición de la comunidad.
                                 </p>
                             </div>
 
@@ -25,13 +32,13 @@ export default class FooterComponent extends Component {
                                 <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Enlaces</h5>
                                 <ul className="list-unstyled">
                                     <li>
-                                        <a href="#!">Inicio</a>
+                                        <Link to="/" className="text-decoration-none">Inicio</Link>
                                     </li>
                                     <li>
-                                        <a href="#!">Cursos</a>
+                                        <Link to="/" onClick={alert} className="text-decoration-none">Cursos</Link>
                                     </li>
                                     <li>
-                                        <a href="#!">Sobre nosostros</a>
+                                        <Link to="/sobre-nosotros" className="text-decoration-none">Sobre nosostros</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -43,28 +50,20 @@ export default class FooterComponent extends Component {
 
                     <ul className="list-unstyled list-inline text-center">
                         <li className="list-inline-item">
-                            <a className="btn btn-primary mx-1">
+                            <a className="btn btn-primary mx-1" href="https://www.facebook.com/paraprogramadoresoficial/" target="_blank">
                                 <i className="fab fa-facebook-f"> </i>
                             </a>
                         </li>
-                       
-                  
                         <li className="list-inline-item">
-                            <a className="btn btn-danger mx-1">
+                            <a className="btn btn-danger mx-1" href="https://www.instagram.com/paraprogramadores/" target="_blank">
                                 <i className="fab fa-instagram"> </i>
                             </a>
                         </li>
-                        <li className="list-inline-item">
-                            <a className="btn btn-dark mx-1">
-                                <i className="fab fa-github"> </i>
-                            </a>
-                        </li>
                     </ul>
-                    <div className="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="#"> Para Programadores</a>
+                    <div className="footer-copyright text-center py-3">© 2020 Copyright
+                    <Link to="/" className="text-decoration-none"> Para Programadores</Link>
                     </div>
                 </footer>
-
 
             </Fragment>
         )

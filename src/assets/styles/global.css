@@ -19,7 +19,6 @@ body{
 }
 
 
-
 /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
 ::-webkit-scrollbar-thumb {
   background: #a6acaf;
